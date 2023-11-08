@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ïðàêòè÷íå çàâäàííÿ ç JavaScript òà DOM</title>
+    <title>Практичне завдання з JavaScript та DOM</title>
 </head>
 <body style="background-image: url(https://s-sd.ru/images/cms/thumbs/a5b0aeaa3fa7d6e58d75710c18673bd7ec6d5f6d/animfon_1920_1031_jpg_0_100.jpg); background-size: cover;">
     <div id="container">
-        <h1 class="header">Çàãîëîâîê</h1>
-        <p class="content">Ïàðàãðàô 123.</p>
+        <h1 class="header">Заголовок</h1>
+        <p class="content">Параграф 123.</p>
         <ul>
-            <li>Ïóíêò 123</li>
-            <li>Ïóíêò 2</li>
-            <li>Ïóíêò 3</li>
+            <li>Пункт 123</li>
+            <li>Пункт 2</li>
+            <li>Пункт 3</li>
         </ul>
-        <a href="#" class="link">Ïîñèëàííÿ</a>
+        <a href="#" class="link">Посилання</a>
     </div>
 
     <script>
-        // Çì³íåííÿ ñòèëþ åëåìåíòó ç id="container"
+        // Змінення стилю елементу з id="container"
         var container = document.getElementById("container");
         container.style.backgroundColor = "#ff7e7e";
         container.style.padding = "20px";
 
-        // Çì³íåííÿ òåêñòó åëåìåíòó ç êëàñîì "content"
+        // Змінення тексту елементу з класом "content"
         var content = document.querySelector(".content");
-        content.textContent = "Ïàðàãðàô";
+        content.textContent = "Параграф";
 
-        // Çì³íåííÿ òåêñòó ïåðøîãî åëåìåíòà <li> â ñïèñêó
+        // Змінення тексту першого елемента <li> в списку
         var firstListItem = document.querySelector("ul li");
-        firstListItem.textContent = "Ïóíêò 1";
+        firstListItem.textContent = "Пункт 1";
 
-        // Äîäàâàíÿ îáðîáíèêà êë³êó äî ïîñèëàííÿ ç êëàñîì "link"
+        // Додаваня обробника кліку до посилання з класом "link"
         var link = document.querySelector(".link");
         link.addEventListener("click", function () {
-            alert("Êîðèñòóâà÷ íàòèñíóâ íà ïîñèëàííÿ.");
+            alert("Користувач натиснув на посилання.");
         });
 
-        // Âèâåäåííÿ ³íôîðìàö³¿ ïðî ñòðóêòóðó áàòüê³âñüêîãî òà äî÷³ðíüîãî åëåìåíò³â
-        console.log("Áàòüê³âñüêèé åëåìåíò äëÿ ïîñèëàííÿ:", link.parentNode);
-        console.log("Ïåðøèé äî÷³ðí³é åëåìåíò äëÿ êîíòåéíåðà:", container.firstElementChild);
+        // Виведення інформації про структуру батьківського та дочірнього елементів
+        console.log("Батьківський елемент для посилання:", link.parentNode);
+        console.log("Перший дочірній елемент для контейнера:", container.firstElementChild);
     </script>
 </body>
 </html>
